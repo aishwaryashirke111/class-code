@@ -1,0 +1,1 @@
+if we write return 1 in main fiunction and in the main if we write system.out.println(fun).then it will print function output as well as 1

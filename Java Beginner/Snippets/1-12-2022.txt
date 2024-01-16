@@ -1,0 +1,139 @@
+import java.util.*;
+class Main {
+	public static void main(String args[]) {
+		// Your code goes here
+		Scanner scn = new Scanner(System.in);
+		
+		//Eligibility to vote
+		/*
+		int age = scn.nextInt();//age = 18
+		
+		if(age >= 18){ //18 >= 18 -> true
+			//will run only when condition is true
+			System.out.println("Go vote!");
+		}
+		*/
+		
+		
+		//If person has fever
+		//whenever you deal in decimal prefer using double
+		
+		/*double temp = scn.nextDouble();
+		
+		if(temp > 98.6){ 
+			System.out.println("You have fever");
+		}
+		*/
+		
+		
+		//check whether a person is pass in Maths
+		/*
+		int marks = scn.nextInt();
+		
+		if(marks >= 33){
+			System.out.println("Pass");
+		}
+		*/
+		
+		/*
+		temp <= 96.0 -> Serious Hypothermia
+		96.0 < temp <= 98.0 -> Hypothermia
+		98.0 < temp <= 99.0 -> normal temp
+		99.0 < temp <= 100.0 -> mild fever
+		100.0 < temp <= 102.0 -> fever
+		temp > 102.0   -> High Fever
+		
+		
+		// 96.0 < temp <= 98.0
+		// temp > 96.0  && temp <= 98.0
+		
+		double temp = scn.nextDouble();
+		//temp = 101.4
+		if(temp <= 96.0){
+			System.out.println("Serious Hypothermia");
+		}
+		if(temp > 96.0 && temp <= 98.0){
+			System.out.println("Hypothermia");
+		}
+		if(temp > 98.0 && temp <= 99.0){
+			System.out.println("Normal temp");
+		}
+		if(temp > 99.0 && temp <= 100.0){
+			System.out.println("mild fever");
+		}
+		if(temp > 100.0 && temp <= 102.0)
+		{
+			System.out.println("Fever");
+		}
+		if(temp > 102.0){
+			System.out.println("High Fever");
+		}
+		*/
+		// true false
+		/*
+		boolean a = (6 > 60); //a -> false
+		System.out.println(a);
+		
+	
+		if(false){
+			//when condition is true
+			System.out.println("Hey there!");
+		}else{
+			//when condition is false
+			System.out.println("Bye!");
+		}
+		
+		System.out.println(10*20);
+		*/
+		
+		//check if number is even/ odd
+		/*
+		int num = scn.nextInt();
+		// num % 2 -> remainder will be integer 
+		if( (num % 2) == 0){
+			//completely divisible by 2 hence even
+			System.out.println("Even");
+		}else{
+			System.out.println("Odd");
+		}
+		*/
+		
+		
+		//12 is divisible by 3
+		
+		// 24 % 4 = 0 [4*6]
+		// 25 % 5 = 0 [5*5]
+		// 28 % 7 = 0 [7*4]
+		// 21 % 3 = 0 [3*7]
+		// System.out.println(12 % 3);
+		
+		//check whether a number is divisible by 5 or not
+		
+		// num = 35 -> YES
+		// num = 57 -> NO
+		/*
+			int n = scn.nextInt();
+			//n = 97
+			//	97 % 5 = 2
+			if(n % 5 == 0){
+				System.out.println("YES");
+			}else{
+				System.out.println("NO");
+			}
+		*/
+		
+		int A = scn.nextInt();
+		int B = scn.nextInt();
+		int C = scn.nextInt();
+		
+		int sum = A + B + C; 
+		 
+		if(sum == 180){
+			System.out.println("VALID");
+		}else{
+			System.out.println("NOT VALID");
+		}
+		
+		
+	}
+}

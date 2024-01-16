@@ -1,0 +1,108 @@
+Relational and Non Relation Databases
+Relational--store data in form of rows and columns 
+Non Relation-- store data in form of key value pair,documents,graphs
+
+Syntax of creating table---->
+Create Table (Table name)(
+coulmn name datatype);
+e.g:CREATE TABLE Persons (
+    PersonID int,
+    LastName varchar(255),
+    FirstName varchar(255),
+    Address varchar(255),
+    City varchar(255)
+);
+
+DATA Types in SQL--->
+1.char--The maximum length of 8000 characters.(Fixed-Length non-Unicode Characters)0 to 255. Default is 1
+2.varchar--The maximum length of 8000 characters.(Variable-Length non-Unicode Characters)0 to 65535
+3.varchar(max)--The maximum length of 231 characters(SQL Server 2005 only).(Variable Length non-Unicode data)
+4.text--The maximum length of 2,127,483,647 characters(Variable Length non-Unicode data)Holds a string with a maximum length of 65,535 bytes
+5.Int--A medium integer. Signed range is from -2147483648 to 2147483647.
+
+syntax for dropping table--->
+DROP TAble (table name);
+syntax to update a table--->
+UPDATE table_name
+SET column1 = value1, column2 = value2, ...
+WHERE condition;
+
+LIMIT/OFFSET----->
+
+select *from film LIMIT 1 OFFSET 1---1 row (LIMIT)2nd record(Offset -after1st record so offset1)
+
+USING----->
+when we have to join 2 tables that has same column name in both the tables use keyword USING no need of write both column names from tables
+
+
+
+Keys----->
+
+primary key- primary key is a unique key from which we can identify the unquie records,its distinctive for each record
+foreign key - to join the two tables we use one common column or records which is known as foreign key.
+candidate key - candidate keys are those super keys with minimal set of records.subset of super keys
+super key - set of columns that can uniqely identify row/record.
+unquie key - unique key is unique
+composite key - any super key with more than one column is composite key.
+
+
+
+Types of joins---->
+1.Inner join- inner join which is defalult join which we use keyword as a JOIN. which will be if the condition is true then the join will happen.
+2.outer join- a.Left outer join b.right outer join 3.full outer join
+a.left outer join- In left outer join whatever is there in left table all the records will be shown irrespective of the qeuery.
+b.right outer join- In right outer join whatever there is in right table that we are joining all the records will be shown in the join query irrspective of the condition 
+c.full outer join - In full outer join all the records from the left or right table will be shown at least once,(UNION) if the value is NULL in another table still the record will show.
+3.compound Join - Multiple conditions if we apply on "ON" clause in join so that part we will call it as compound join.
+4.self join - join in which we join the same table 
+5.cross join -all possible combinations is called as cross join
+
+Normalization--->
+Normalization is used to minimize the redundancy from a relation or set of relations
+It is a process of making a table free from insert update and delete anamoly 
+we decompose one table into two or more tables to avoid these anamolies or problems
+we save space and time by reducing redunant data or duplicate data ,it will also simplifies the queries
+normalize minimize null values,simplifies data table structure
+In below transactions we need to normalize the data
+OLAP -online analytic data, denormalize dara (mostly historical data or analystical data )
+OLTP- online transation processing -normalize adata (daily transactions)
+
+Transactions --->
+Transactions is a set of databases operations logically grouped together to perform task.
+properties of transactions
+1.Atomicity-something (transaction)should happen or nothing should happen
+2.consistancy--system should always in logical correct state-correctness and accuracy
+3.Isolation-one transaction should not affect another transaction running at same time or the same DB in a every way
+4.Durability-If 1 transaction is completed we want it to be consistent.
+
+Transactions Isloation Levels-->
+1.Read Uncommitted
+2.Read Committed
+3.Repeatbale Reads
+4.Serializable
+
+COMMIT-Auto Commit-save changes autimatically.when we run a query it will execute and save that data in DB.
+RollBack-It just delete the changes that were not committed. in sinmple word it is UNDO.
+
+
+Diff Between DROP ,Delete and Truncate
+Delete -Delete data and we can rolled it back, we can choose which row we have to delete by query, we can alter a table structure,table structure will be there
+DROP - Delete table from database we cannot roll it back.Drop will delete constraints attributes and create empty space for new table it does not recretes a table.
+Truncate- Delete table from database we cannot roll it back.All data will be deletd by truncate.
+
+ROUND(MAX(COLUMN_NAME),4(DECIMAL PLACES)
+
+
+INDEX ----->
+Indexes are used to filter out the particular rows ,it will take minimun time to fliter out ,its like first page of book indexes
+Syntax
+Create Index (Index_Name) on film(title)
+first indexes will store in Hard disk then it will load to RAM to decrease the load and time on hard disk
+Clustered Index-The data or file, that you are moving into secondary memory should be in sequential or sorted order.
+There should be a key value, meaning it can not have repeated values
+Non Clustered Index-The non-Clustered Index is similar to the index of a book. The index of a book consists of a 
+chapter name and page number, if you want to read any topic or chapter then you can directly go to that page by using the index of that book.
+No need to go through each and every page of a book. 
+
+
+ON UPDATE AND ON DELETE

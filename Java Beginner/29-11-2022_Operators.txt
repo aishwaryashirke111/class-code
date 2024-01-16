@@ -1,0 +1,13 @@
+int*int->int
+long*long->long
+int*long->long
+
+
+
+
+int->long->float->double->upcasting
+double->float->long->int->downcasting
+
+
+modulus-%
+the remainder will be 0 if we divide by 2 to even number ,if we didvide odd number by 2 then it is 1.

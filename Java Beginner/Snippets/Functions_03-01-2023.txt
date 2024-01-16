@@ -1,0 +1,94 @@
+import java.util.*;
+class Main {
+	
+	//void -> return type of that function in which you do not return any output
+	static int count_digits(int x){
+		//x = 3678991
+		int count = 0;
+		while(x > 0){
+			count++;
+			x = x/10;
+		}
+		//count = 7
+		// System.out.println("Inside function");
+		return count;
+	}
+	
+	//write a function that will 
+	//print the sum of two inputs
+	static void sum2(int a, int b){
+		System.out.println(a+b);
+		return;
+	}
+	
+	
+	
+	
+	
+	
+	//write a function that will take 
+	//two inputs and return the sum of those inputs
+	static int fun(int a, int b){
+		//a = 5, b = 10
+		int c = a+b;//15
+		return c;
+	}
+	
+	
+	public static void main(String args[]) {
+		// Your code goes here
+		//execution starts from main
+		Scanner scn = new Scanner(System.in);
+		
+		System.out.println((int)Math.ceil(-6.9999999));
+		System.out.println((int)Math.floor(-6.999999));
+		// int ans = fun(5, 10);
+		
+		// // int ans = count_digits(3678991);//calling a function
+		// // //ans = 7
+		// System.out.println(ans);
+		
+		// sum2(4, 8);
+		
+		// int a = scn.nextInt();
+		// // System.out.println(count_digits(a));
+		// int b = scn.nextInt();
+		// // System.out.println(count_digits(b));
+		
+		
+		// pre defined functions
+		// int ans = (int)Math.pow(2, 4); //2^4
+		// System.out.println(ans);
+		
+		// function1();
+		// System.out.println(function1());
+		
+		// int n1 = square(3);//n1=9
+		// int n2 = square(5);//n2 = 25
+		
+		// System.out.print(add(n1, square(9)));//90
+		/*
+		add(n1, square(9))
+		add(9, 81)
+		90
+		*/
+		
+		
+		
+	}
+	
+	public static int square(int x)  {
+		//x= 9
+		return x * x; //81
+	}
+
+	public static int add(int x , int y) {
+		//x = 9 , y = 81
+		return x + y; //90
+	}
+
+
+	static void function1(){
+		System.out.println("Happy New Year");
+	}
+}

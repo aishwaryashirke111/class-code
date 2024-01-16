@@ -1,0 +1,40 @@
+import java.util.*;
+class Main {
+	public static void main(String args[]) {
+		// Your code goes here
+		
+		HashMap<String, Integer> map = new HashMap<>();
+		
+		//add/ update
+		map.put("Delhi", 10);
+		map.put("Haryana", 8);
+		map.put("U.P", 30);
+		
+		System.out.println(map);
+		
+		//map.keySet() -> collection of keys in our HashMap
+		for(String x : map.keySet()){
+			System.out.println(x + " -> " + map.get(x));
+		}
+		
+		map.put("Delhi", 12);
+		System.out.println(map);
+		
+		//get the value of a keySet
+		System.out.println(map.get("Haryana"));
+		System.out.println(map.get("Gujarat"));
+		
+		//check whether key is present
+		System.out.println(map.containsKey("Delhi"));
+		System.out.println(map.containsKey("Gujarat"));
+		
+		//size -> number of keys 
+		System.out.println(map.size());
+		
+		map.put("Gujarat", 15);
+		System.out.println(map);
+		
+		
+		Break till 
+	}
+}
