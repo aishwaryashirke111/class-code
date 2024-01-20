@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello</h1>
+    <input type="text">
+    
+</body>
+<script>
+    let count =0;
+    function work(){
+        console.log("Network Request",count);
+        count++;
+    }
+    
+
+    
+    function Debounce(work,delay){
+       let timerId ;
+        return function optworkfn(){
+           // console.log(timerId);
+            clearTimeout(timerId);
+            timerId = setTimeout(function (){
+                work();
+            },delay)            
+        };
+    }
+    // function throttle(work,interval){
+    //     let flag = true;
+    //     return function optworkfn(){           
+    //         if(flag == true){
+    //             work();
+    //             flag = false;
+    //         }
+    //         setTimeout(function(){
+    //             flag = true;
+    //         },interval)
+
+    //     }
+    // }
+    let input = document.querySelector("input");
+    let optimized = Debounce(work,4000);
+    input.addEventListener("keydown",optimized);
+</script>
+</html>
