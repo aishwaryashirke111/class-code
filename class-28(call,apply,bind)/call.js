@@ -26,5 +26,5 @@ let mydetails3 ={
 Address.call(mydetails,"Bengaluru","India");
 Address.apply(mydetails2,["Hyderabad","India"]);
 let bindfunc = Address.bind(mydetails3);
-//console.log(bindfunc);
+console.log(bindfunc);
 bindfunc();
