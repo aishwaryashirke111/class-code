@@ -9,3 +9,8 @@ console.log(toplast);
 //in destrcturing we can skip the values in array this is new feature in ES6
 
 console.warn(`My fav prog lang is ${top1} and 2nd fav is ${top3}`)
+
+
+//symbol-data type in jS
+const mysymbol = Symbol('mysymbol',{global:true});
+console.log(mysymbol)
