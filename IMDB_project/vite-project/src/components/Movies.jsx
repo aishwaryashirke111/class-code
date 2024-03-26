@@ -14,10 +14,10 @@ function Movies() {
   };
 
   const handlePrevious = () => {
-    if (pageNo === 1) {
-      setPageNo(pageNo);
+    if (pageNo >=2) { 
+      setPageNo(pageNo-1);
     }
-    setPageNo(pageNo - 1);
+    //setPageNo(pageNo-1);
   };
 
   useEffect(() => {
